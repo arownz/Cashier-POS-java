@@ -1,6 +1,7 @@
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
@@ -41,6 +42,7 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+        setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -213,8 +215,12 @@ public class Login extends javax.swing.JFrame {
           String uname = userText.getText();
           String upass = String.valueOf(userPass.getPassword());
           if (uname.equals("cashier") && upass.equals("pos")) {
-
+              
               Dashboard dashboard = new Dashboard();
+                     ImageIcon jframeicon = new ImageIcon(getClass().getResource("/images/coffee logo (2).png"));
+        dashboard.setIconImage(jframeicon.getImage());
+        dashboard.setResizable(false);
+                   
               dashboard.setVisible(true);
               setVisible(false);
 

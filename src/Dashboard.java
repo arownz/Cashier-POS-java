@@ -9,20 +9,19 @@ import javax.swing.JOptionPane;
 
 public class Dashboard extends javax.swing.JFrame {
 
-    private double total = 0.0;
-    private int x = 0;
-    private double tax = 0.0;
-    private double pays = 0.0;
-    private double change = 0.0;
-
     public Dashboard() {
         initComponents();
         init();
         Payment.setVisible(false);
     }
 
+    private double total = 0.0;
+    private int x = 0;
+    private double tax = 0.0;
+    private double pays = 0.0;
+    private double change = 0.0;
+
     public void init() {
-        setTitle("Cashier Point of Sale System");
         setImage();
         setTime();
     }
@@ -329,8 +328,9 @@ public class Dashboard extends javax.swing.JFrame {
         jTextTotal2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Cashier Point of Sale System");
+        setTitle("Cashier Point of Sale GUI");
         setMinimumSize(new java.awt.Dimension(1400, 680));
+        setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
@@ -1364,7 +1364,7 @@ public class Dashboard extends javax.swing.JFrame {
             tax = 20.5;
         }
     }
-
+    
     public void setTime() {
         new Thread(new Runnable() {
             @Override
@@ -1890,7 +1890,7 @@ public class Dashboard extends javax.swing.JFrame {
       // TODO add your handling code here:
   }//GEN-LAST:event_jTextTotal2ActionPerformed
 
-      /**
+    /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -1915,6 +1915,7 @@ public class Dashboard extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        
         //</editor-fold>
 
         /* Create and display the form */
@@ -1924,7 +1925,7 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
     }
-  
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Payment;
     private javax.swing.JButton backtoLogin;
