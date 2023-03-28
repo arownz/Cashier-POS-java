@@ -1677,7 +1677,7 @@ public class Dashboard extends javax.swing.JFrame {
           Double pays1 = Double.parseDouble(pays2);
           jTextTotal.setText(String.valueOf(String.format("%.1f", tax + total)));
           if (pays1 == 0.0) {
-              JOptionPane.showMessageDialog(null, "You haven't added costumer payment yet.", "Total(₱)", JOptionPane.ERROR_MESSAGE);
+              JOptionPane.showMessageDialog(null, "You haven't added costumer payment yet.", "Total(₱.)", JOptionPane.ERROR_MESSAGE);
           } else {
               jTextChange.setText(String.valueOf(String.format("%.1f", pays1 - total - tax)));
               textArea.setText(textArea.getText()
