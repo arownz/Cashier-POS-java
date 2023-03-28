@@ -161,9 +161,9 @@ public class Dashboard extends javax.swing.JFrame {
         num2 = new javax.swing.JButton();
         num3 = new javax.swing.JButton();
         num4 = new javax.swing.JButton();
+        num7 = new javax.swing.JButton();
         num5 = new javax.swing.JButton();
         num6 = new javax.swing.JButton();
-        num7 = new javax.swing.JButton();
         num8 = new javax.swing.JButton();
         num9 = new javax.swing.JButton();
         num0 = new javax.swing.JButton();
@@ -430,6 +430,15 @@ public class Dashboard extends javax.swing.JFrame {
         });
         Payment.add(num4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 60, 80));
 
+        num7.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
+        num7.setText("7");
+        num7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                num7ActionPerformed(evt);
+            }
+        });
+        Payment.add(num7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 60, 80));
+
         num5.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         num5.setText("5");
         num5.addActionListener(new java.awt.event.ActionListener() {
@@ -447,15 +456,6 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
         Payment.add(num6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 60, 80));
-
-        num7.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        num7.setText("7");
-        num7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num7ActionPerformed(evt);
-            }
-        });
-        Payment.add(num7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 60, 80));
 
         num8.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         num8.setText("8");
@@ -1364,7 +1364,7 @@ public class Dashboard extends javax.swing.JFrame {
             tax = 20.5;
         }
     }
-    
+
     public void setTime() {
         new Thread(new Runnable() {
             @Override
@@ -1677,7 +1677,7 @@ public class Dashboard extends javax.swing.JFrame {
           Double pays1 = Double.parseDouble(pays2);
           jTextTotal.setText(String.valueOf(String.format("%.1f", tax + total)));
           if (pays1 == 0.0) {
-              JOptionPane.showMessageDialog(null, "You haven't added costumer payment yet.", "Total", JOptionPane.ERROR_MESSAGE);
+              JOptionPane.showMessageDialog(null, "You haven't added costumer payment yet.", "Total(₱)", JOptionPane.ERROR_MESSAGE);
           } else {
               jTextChange.setText(String.valueOf(String.format("%.1f", pays1 - total - tax)));
               textArea.setText(textArea.getText()
@@ -1726,7 +1726,7 @@ public class Dashboard extends javax.swing.JFrame {
   }//GEN-LAST:event_formWindowActivated
 
   private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-      // TODO add your handling code here:
+
   }//GEN-LAST:event_formWindowOpened
 
   private void jTextTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextTotalActionPerformed
@@ -1915,7 +1915,7 @@ public class Dashboard extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        
+
         //</editor-fold>
 
         /* Create and display the form */
